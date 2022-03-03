@@ -1,0 +1,87 @@
+/* root : 최상 위치 (모든 수행 가능)*/
+:root{
+    /* 자주 사용하는 Color 모음 */
+    /* 
+        자주 사용하는 Color에 변수이름을 지정
+        변수 이름을 계속 활용함
+    */
+    --mainColor: #eaeaea;
+    --secondaryColor: #fff;
+    --borderColor: #c1c1c1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+}
+.row-col{
+    display: flex;
+    flex-direction: column;
+}
+/* h3 ~ h6 공통처리(전역변수 개념) */
+h3,
+h6{
+    font-family: "Russo One", sans-serif;
+    font-weight: 500;
+}
+.section{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+}
+.project-container{
+    width: 1200px;
+    /* 위 아래는 없고 오른쪽 왼쪽은 자동으로 맞추기 */
+    margin: 0 auto;
+}
+.project-container h3{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 12px;
+    margin: 28px 0;
+}
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,280px);
+    gap: 20px;
+    margin: 10px 0;
+}
+.post img{
+    width: 100%;
+    height: 200px;
+    /* object-fit : 사진 깨짐 방지 */
+    object-fit: cover;
+}
+.post-preview{
+    background-color: var(--secondaryColor);
+    padding: 5%;
+}
+.post-preview h6{
+
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.post-preview p{
+    color: #4b5156;
+    font-size: 14px;
+    margin: 14px 0;
+}
+.post-preview a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+.post{
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    box-shadow: -2px 7px 12px -9px rgba(0, 0, 0, 0.75);
+}
+.post:hover{
+    transform: scale(0.95) rotate(0.005turn);
+    transition: 0.5s;
+}
