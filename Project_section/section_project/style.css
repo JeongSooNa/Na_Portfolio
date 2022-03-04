@@ -85,3 +85,62 @@ h6{
     transform: scale(0.95) rotate(0.005turn);
     transition: 0.5s;
 }
+
+/* For section_about */
+.main-container{
+    width: 1200px;
+    height: 615px;
+    margin: 0 auto;
+}
+.about-wrapper{
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.about-me{
+    width: 550px;
+    height: auto;
+}
+.about-me p{
+    margin: 16px;
+}
+.about-me h4{
+    font-size: 24px;
+    margin: 32px 0;
+}
+.skills{
+    justify-content: space-evenly;
+    background-color: #f0ead6;
+    border-radius: 10px;
+}
+.skills ul{
+    list-style: none;
+    padding-left: 40px;
+    padding: 16px 0;
+}
+.skills ul li{
+    color: #4b5156;
+}
+.social-link{
+    width: 550px;
+    height: auto;
+}
+.social-link img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* 사진 깨짐 방지 */
+    object-fit: cover;
+}
+.social-link h3{
+    text-align: center;
+    margin: 28px 0;
+    font-size: 28px;
+}
+.github{
+    text-align: center;
+}
+.github a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #17a2b8;
+}
