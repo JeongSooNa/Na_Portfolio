@@ -155,6 +155,7 @@ header{
 }
 /* 제목 글자에 animation 주기 */
 .greeting-wrapper span{
+    font-family: 'Dancing Script', cursive;
     font-size: 56px;
     font-weight: 100;
     margin: 0 20px;
@@ -179,7 +180,6 @@ header{
 */
 @keyframes loading {
     0% {
-        color: ;
       transform: scale(1);
     }
     50%{
