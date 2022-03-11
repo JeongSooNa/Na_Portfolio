@@ -9,28 +9,78 @@
     <style>
         @import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
         @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div class="container">
+        <div class="bird-animation">
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
+        </div>
         <div class="row-col nav">
             <h1>nav</h1>
-            <a href="#">Header</a>
-            <a href="#">Intro</a>
-            <a href="#">Represent</a>
-            <a href="#">Food</a>
-            <a href="#">How to Make</a>
-            <a href="#">Contect</a>
+            <ul>
+                <li onclick="doScroll_main()">Header</li>
+                <li onclick="doScroll_intro()">Intro</li>
+                <li onclick="doScroll_represent()">Represent</li>
+                <li>How to Make</li>
+                <li onclick="doScroll_contect()">References<br>&<br>Contect</li>
+            </ul>
         </div>
         <div class="header">
-            <h1>영주를 소개합니다.</h1>
+            <h1>
+                <span style="--i:1">Y</span>
+                <span style="--i:2">E</span>
+                <span style="--i:3">O</span>
+                <span style="--i:4">N</span>
+                <span style="--i:5">G</span>
+                <span>       </span>
+                <span style="--i:6">J</span>
+                <span style="--i:7">U</span>
+            </h1>
+            <p>Product by Na Jeongsoo</p>
         </div>
         <div class="main">
-            <div class="intro">
-                <!-- 여기에 훈민정음 animation -->
+            <div class="row-col intro">
+                <div class="intro-top">
+                    <h1>Intro</h1>
+                    <p>
+                        Let me introduce my hometown Yeong Ju<br>
+                        Where : Yeongju Gyeongsangbuk-do Korea<br>
+                        [소개]<br>
+                        옛 선조들이 학문을 닦고 자연을 벗삼아 지키던<br>
+                        태백산맥 소백산자락에 자리잡아 물길은 낙동강으로 이어지는
+                        아름다운 선비의 고장
+                    </p>
+                </div>
+                <div class="intro-bottom" data-tilt>
+                    <img class="img1" src="img/song.png" alt="">
+                    <img class="img2" src="img/음표.png" alt="">
+                </div>
             </div>
             <div class="represent">
-                <!-- 영주의 대표 -->
+                <div class="represent-start">
+                    <h1>Represent</h1>
+                    <h2>영주의 맛과 멋을 찾아서</h2>
+                </div>
+                <div class="buseoksa">
+                    
+                </div>
+                <div class="naduri"></div>
             </div>
             <div class="food">
                 <!-- 영주의 음식 -->
@@ -39,7 +89,45 @@
                 <!-- 제작과정 -->
             </div>
         </div>
-        <div class="footer"></div>
+        <div class="row footer">
+            <div class="row-col contect">
+                <div class="row-col instagram">
+                    <img src="img/instagram_logo.png" alt="">
+                    <a href="https://www.instagram.com/94__jeongsoo/">INSTAGRAM</a>
+                </div>
+                <div class="row-col instagram">
+                    <img src="img/github_logo.png" alt="">
+                    <a href="https://github.com/JeongSooNa">GitHub</a>
+                </div>
+            </div>
+            <div class="row-col information">
+                <h1>Name : <span>Jeongsoo Na</span></h1>
+                <h1>Tel : <span>010 6672 3171</span></h1>
+                <h1>E-mail : <span>skwjdtn3171@naver.com</span></h1>
+            </div>
+            <div class="references">
+                <h1>References</h1>
+                <li><a href="https://codepen.io/matchboxhero/pen/RLebOY">codepen.io</a></li>
+                <li><a href="https://micku7zu.github.io/vanilla-tilt.js/">Vanilla-tilt.js</a></li>
+            </div>
+        </div>
     </div>
+    
+    <script> 
+        AOS.init();
+        function doScroll_main(){
+            window.scrollTo({top:0,behavior:"smooth"})
+        }
+        function doScroll_intro(){
+            window.scrollTo({top:1100,behavior:"smooth"})
+        }
+        function doScroll_represent(){
+            window.scrollTo({top:2150,behavior:"smooth"})
+        }
+        function doScroll_contect(){
+            window.scrollTo({top:5000,behavior:"smooth"})
+        }
+    </script>
+    <script src="vanilla-tilt.js"></script>
 </body>
 </html>
