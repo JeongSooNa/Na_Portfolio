@@ -9,6 +9,10 @@
     <style>
         @import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
         @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
     </style>
@@ -76,14 +80,43 @@
                 <div class="represent-start">
                     <h1>Represent</h1>
                     <h2>영주의 맛과 멋을 찾아서</h2>
+                    <div class="row-col rep-downbutton" onclick="doScroll_buseoksa()">
+                        <h4>Click Down</h4>
+                        <img src="./img/—Pngtree—arrow directional vector_5956632.png" alt="">
+                    </div>
                 </div>
-                <div class="buseoksa">
-                    
+                <div class="row buseoksa">
+                    <div class="row-col buseoksa-post">
+                        <h1>부석사</h1>
+                        <p>
+                            대한민국 7대 사찰 중 하나<br>
+                            승려를 사랑한 여인이 용이 되어<br>
+                            스님과 절을 지켰다는 이야기를 갖고있다.
+                        </p>
+                        <h1>무량수전</h1>
+                        <p>
+                            국보 제 18호<br>
+                            우리나라에서 가장 오래된 목조건물<br>
+                            신라시대에 지어져 고려시대에 재 건축된 건물
+                        </p>
+                        <img src="./img/buseoksa.jpeg" alt="">
+                    </div>
+                    <div class="row-col buseoksa-view">
+                        <img src="./img/muryangsujeon.jpeg" alt="">
+                        <p>
+                            부석사에서 바라본 소백산(小白山)<br>
+                            경상도를 소백산맥의 남쪽에 있다하여 영남(嶺南)이라 한다.<br>
+                            여우가 산다하니 찾아보자.
+                        </p>
+                    </div>
+                    <div class="row-col buseoksa-downbutton" onclick="doScroll_museom()">
+                        <h4>Click Down</h4>
+                        <img src="./img/—Pngtree—arrow directional vector_5956632.png" alt="">
+                    </div>
                 </div>
-                <div class="naduri"></div>
-            </div>
-            <div class="food">
-                <!-- 영주의 음식 -->
+                <div class="row museom">
+
+                </div>
             </div>
             <div class="how-to-make">
                 <!-- 제작과정 -->
@@ -91,11 +124,11 @@
         </div>
         <div class="row footer">
             <div class="row-col contect">
-                <div class="row-col instagram">
+                <div class="row-col sns">
                     <img src="img/instagram_logo.png" alt="">
-                    <a href="https://www.instagram.com/94__jeongsoo/">INSTAGRAM</a>
+                    <a href="https://www.instagram.com/94__jeongsoo/">Instagram</a>
                 </div>
-                <div class="row-col instagram">
+                <div class="row-col sns">
                     <img src="img/github_logo.png" alt="">
                     <a href="https://github.com/JeongSooNa">GitHub</a>
                 </div>
@@ -122,7 +155,13 @@
             window.scrollTo({top:1100,behavior:"smooth"})
         }
         function doScroll_represent(){
-            window.scrollTo({top:2150,behavior:"smooth"})
+            window.scrollTo({top:2100,behavior:"smooth"})
+        }
+        function doScroll_buseoksa(){
+            window.scrollTo({top:3050,behavior:"smooth"})
+        }
+        function doScroll_museom(){
+            window.scrollTo({top:4050,behavior:"smooth"})
         }
         function doScroll_contect(){
             window.scrollTo({top:5000,behavior:"smooth"})
