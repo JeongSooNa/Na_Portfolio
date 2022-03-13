@@ -365,7 +365,7 @@
 .represent-start{
     width: 90%;
     height: 90vh;
-    margin: 100px auto;
+    margin: 200px auto;
     text-align: center;
     background-image: url(img/flying_hak.jpg);
     background-size: cover;
@@ -394,6 +394,20 @@
     font-family: 'Tangerine', cursive;
     font-size: 30px;
     cursor: pointer;
+}
+.rep-downbutton h4{
+    animation: rep-downbutton linear 1s infinite;
+}
+@keyframes rep-downbutton{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 .rep-downbutton img{
     width: 60px;
@@ -443,6 +457,20 @@
     font-size: 30px;
     cursor: pointer;
 }
+.buseoksa-downbutton h4{
+    animation: buseoksa-downbutton linear 1s infinite;
+}
+@keyframes buseoksa-downbutton{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 .buseoksa-downbutton img{
     width: 60px;
     height: 60px;
@@ -453,9 +481,85 @@
     width: 90%;
     height: 100vh;
     margin: 100px auto;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
 }
+.museom-title{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    justify-content: space-between;
+}
+.museom-post{
+    width: 100%;
+    height: 80%;
+    background-image: url(./img/muiseom.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10%;
+    grid-gap: 10%;
+    padding: 10%;
+    border-radius: 30px;
+}
+.museom-post-card{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 30px;
+    position: relative;
+}
+.museom-post-card:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.museom-post-card:nth-child(1) p{
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+}
+.museom-post-card:nth-child(1):hover{
+    transition: all linear 0.1s;
+    transform: rotate(0.01turn);
+}
+.museom-post-card:nth-child(2):hover{
+    transform: scale(2.5);
+    transform-origin: 0 0;
+    transition: all ease-in-out 0.4s;
+    background-color: white;
+    z-index: 1;
+}
+.museom-post-card:nth-child(3):hover{
+    transform: scale(2.5);
+    transform-origin: 100% 0;
+    transition: all ease-in-out 0.4s;
+    background-color: white;
+    z-index: 1;
+}
+.museom-post-card:nth-child(4):hover{
+    transform: scale(2.5);
+    transform-origin: 0 100%;
+    transition: all ease-in-out 0.4s;
+    background-color: white;
+    z-index: 1;
+}
+.museom-post-card:nth-child(5):hover{
+    transform: scale(2.5);
+    transform-origin: 100% 100%;
+    transition: all ease-in-out 0.4s;
+    background-color: white;
+    z-index: 1;
+}
+.museom-post-card-front{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
 
 /* Footer */
 .footer{
