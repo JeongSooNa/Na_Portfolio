@@ -71,6 +71,127 @@
 	background-position: center center;
 	padding: 2rem;
 }
+/* circle */
+.cssload-circle {
+	width: 400px;
+	height: 400px;
+	line-height: 146px;
+	margin: 49px auto;
+	position: absolute;
+    top: 53%;
+    left: 39%;
+	box-sizing: border-box;
+	text-align: center;
+	z-index: 0;
+	text-transform: uppercase;
+		-o-text-transform: uppercase;
+		-ms-text-transform: uppercase;
+		-webkit-text-transform: uppercase;
+		-moz-text-transform: uppercase;
+}
+.cssload-circle:before,
+.cssload-circle:after {
+	opacity: 0;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	content: "\0020";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 5px solid rgba(0, 0, 0, 0.205);
+	box-shadow: 0 0 49px rgb(0,0,0), inset 0 0 49px rgb(0,0,0);
+		-o-box-shadow: 0 0 49px rgb(0,0,0), inset 0 0 49px rgb(0,0,0);
+		-ms-box-shadow: 0 0 49px rgb(0,0,0), inset 0 0 49px rgb(0,0,0);
+		-webkit-box-shadow: 0 0 49px rgb(0,0,0), inset 0 0 49px rgb(0,0,0);
+		-moz-box-shadow: 0 0 49px rgb(0,0,0), inset 0 0 49px rgb(0,0,0);
+}
+.cssload-circle:after {
+	z-index: 1;
+	animation: cssload-gogoloader 2.3s infinite 1.15s;
+		-o-animation: cssload-gogoloader 2.3s infinite 1.15s;
+		-ms-animation: cssload-gogoloader 2.3s infinite 1.15s;
+		-webkit-animation: cssload-gogoloader 2.3s infinite 1.15s;
+		-moz-animation: cssload-gogoloader 2.3s infinite 1.15s;
+}
+.cssload-circle:before {
+	z-index: 2;
+	animation: cssload-gogoloader 2.3s infinite;
+		-o-animation: cssload-gogoloader 2.3s infinite;
+		-ms-animation: cssload-gogoloader 2.3s infinite;
+		-webkit-animation: cssload-gogoloader 2.3s infinite;
+		-moz-animation: cssload-gogoloader 2.3s infinite;
+}
+@keyframes cssload-gogoloader {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+@-o-keyframes cssload-gogoloader {
+	0% {
+		-o-transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-o-transform: scale(1);
+		opacity: 0;
+	}
+}
+@-ms-keyframes cssload-gogoloader {
+	0% {
+		-ms-transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-ms-transform: scale(1);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes cssload-gogoloader {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}
+@-moz-keyframes cssload-gogoloader {
+	0% {
+		-moz-transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: scale(1);
+		opacity: 0;
+	}
+}
 /* Bird */
 .bird {
 	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
@@ -236,7 +357,7 @@
     color: white;
     text-align: left;
     margin: 10px;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: 700;
     font-family: 'Tangerine', cursive;
     /* font-family: 'Courgette', cursive; */
@@ -268,12 +389,128 @@
 .header p{
     text-align: center;
     color: white;
-    font-size: 35px;
+    font-size: 13px;
     letter-spacing: 3px;
     /* font-family: 'Dancing Script', cursive; */
-    font-family: 'Tangerine', cursive;
+    /* font-family: 'Tangerine', cursive; */
 }
-
+.cssload-loader {
+	width: auto;
+	height: 60px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+	font-family: helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size:18px;
+}
+.cssload-loader::before, .cssload-loader::after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+	position: absolute;
+	animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-o-animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-ms-animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-webkit-animation: cssload-load 0.81s infinite alternate ease-in-out;
+		-moz-animation: cssload-load 0.81s infinite alternate ease-in-out;
+}
+.cssload-loader::before {
+	top: 0;
+}
+.cssload-loader::after {
+	bottom: 0;
+}
+@keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
+}
+@-o-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
+}
+@-ms-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
+}
+@-webkit-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
+}
+@-moz-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 29px;
+		width: 15px;
+	}
+	50% {
+		height: 8px;
+		width: 39px;
+	}
+	100% {
+		left: 229px;
+		height: 29px;
+		width: 15px;
+	}
+}
 /* 여기서부터 main */
 .main{
     width: 95%;
@@ -428,6 +665,8 @@
 }
 .buseoksa-post h1{
     text-align: center;
+    font-family: 'Jeju Hallasan', cursive;
+    letter-spacing: 20px;
 }
 .buseoksa-post p{
     line-height: 30px;
@@ -490,6 +729,11 @@
     text-align: center;
     justify-content: space-between;
 }
+.museom-title h1{
+    font-family: 'Jeju Hallasan', cursive;
+    letter-spacing: 30px;
+    font-size: 50px;
+}
 .museom-post{
     width: 100%;
     height: 80%;
@@ -509,6 +753,12 @@
     cursor: pointer;
     padding: 30px;
     position: relative;
+}
+.museom-post-card h1{
+    letter-spacing: 15px;
+    font-weight: 100;
+    font-size: 25px;
+    font-family: 'Jeju Hallasan', cursive;
 }
 .museom-post-card:nth-child(1){
     grid-column: 1/2;
@@ -530,12 +780,24 @@
     background-color: white;
     z-index: 1;
 }
+.museom-post-card:nth-child(2):hover h1{
+    display: none;
+}
+.museom-post-card:nth-child(2):hover .museom-post-card-back{
+    display: block;
+}
 .museom-post-card:nth-child(3):hover{
     transform: scale(2.5);
     transform-origin: 100% 0;
     transition: all ease-in-out 0.4s;
     background-color: white;
     z-index: 1;
+}
+.museom-post-card:nth-child(3):hover h1{
+    display: none;
+}
+.museom-post-card:nth-child(3):hover .museom-post-card-back{
+    display: block;
 }
 .museom-post-card:nth-child(4):hover{
     transform: scale(2.5);
@@ -544,6 +806,12 @@
     background-color: white;
     z-index: 1;
 }
+.museom-post-card:nth-child(4):hover h1{
+    display: none;
+}
+.museom-post-card:nth-child(4):hover .museom-post-card-back{
+    display: block;
+}
 .museom-post-card:nth-child(5):hover{
     transform: scale(2.5);
     transform-origin: 100% 100%;
@@ -551,12 +819,149 @@
     background-color: white;
     z-index: 1;
 }
+.museom-post-card:nth-child(5):hover h1{
+    display: none;
+}
+.museom-post-card:nth-child(5):hover .museom-post-card-back{
+    display: block;
+}
 .museom-post-card-front{
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     color: white;
+}
+.museom-post-card-front:hover{
+    display: none;
+}
+.museom-post-card-back{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.museom-post-card-back h2{
+    margin-bottom: 10px;
+    font-family: 'Jeju Hallasan', cursive;
+    letter-spacing: 15px;
+}
+.museom-post-card-back p{
+    font-size: 10px;
+}
+.museom-post-card-back img{
+    margin-top: 10px;
+    width: 60%;
+    height: 60%;
+}
+.museom-downbutton{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    width: 100px;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    cursor: pointer;
+}
+.museom-downbutton h4{
+    animation: museom-downbutton linear 1s infinite;
+}
+@keyframes museom-downbutton{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.museom-downbutton img{
+    width: 60px;
+    height: 60px;
+    transform: rotate(-0.1turn);
+}
+.naduri{
+    width: 90%;
+    height: 100vh;
+    margin: 200px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.naduri-intro{
+    width: 30%;
+    height: 90%;
+    text-align: center;
+    justify-content: space-around;
+}
+.naduri-intro h1{
+    font-size: 50px;
+    letter-spacing: 20px;
+    font-family: 'Jeju Hallasan', cursive;
+}
+.naduri-intro p{
+
+}
+.naduri-intro img{
+    width: 100%;
+    border-radius: 10px;
+}
+.naduri-section{
+    width: 60%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    gap: 30px;
+    padding: 30px;
+}
+.naduri-section-card{
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.naduri-section-card:hover{
+    transition: all linear .2s;
+    transform: scale(1.1);
+}
+.naduri-section-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: ;
+}
+.naduri-section-card:nth-child(1){
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+.naduri-section-card:nth-child(4){
+    grid-row: 3/4;
+    grid-column: 1/3;
+    background: none;
+}
+.naduri-section-card:nth-child(5) img{
+    width: 200px;
+    height: 100px;
+    margin: 20px 30px;
+}
+.naduri-section-card:nth-child(5) p{
+    text-align: center;
+}
+.naduri-section-card:nth-child(5) a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
 }
 
 
