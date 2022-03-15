@@ -59,7 +59,8 @@
             <ul>
                 <li onclick="doScroll_main()">Main</li>
                 <li onclick="doScroll_intro()">Intro</li>
-                <li onclick="doScroll_represent()">Represent</li>
+                <li onclick="doScroll_represent()">Places</li>
+                <li onclick="doScroll_specialties()">specialties</li>
                 <li onclick="doScroll_howtomake()">How to Make</li>
                 <li onclick="doScroll_contect()">References<br>&<br>Contect</li>
             </ul>
@@ -105,7 +106,7 @@
             <div class="represent">
                 <!-- 대표 시작 -->
                 <div class="represent-start">
-                    <h1>Represent</h1>
+                    <h1>Places</h1>
                     <h2>영주의 맛과 멋을 찾아서</h2>
                     <div class="row-col rep-downbutton" onclick="doScroll_buseoksa()">
                         <h4>Click Down</h4>
@@ -247,6 +248,66 @@
                         </div>
                     </div>
                 </div>
+                <div class="row-col specialties">
+                    <div class="row-col specialties-title">
+                        <h1>영주의 특산품</h1>
+                        <p>영주의 특산품을 소개합니다.</p>
+                    </div>
+                    <div class="row specialties-section">
+                        <div class="specialties-item">
+                            <h1>사과</h1>
+                            <p>
+                                전국 최고의 일조량과 소백산의 깊은 맛을<br>
+                                바탕으로 늦가을 영주사과 맛의 끝장,<br>
+                                그 깊은 세계로 세상 사람을 모두 초대한다.<br>
+                                시원한 가을 바람 속에 스며든 상큼한 사과향,<br>
+                                새콤달콤 아삭한 식감은 풍성한 세월과 섞여<br>
+                                새로운 풍미를 전달한다.<br>
+                                현대인들의 스트레스 해소와 건강,<br>
+                                그리고 별미를 찾는 관광객들에게<br>
+                                해방감과 맛의 극치를 선사한다.
+                            </p>
+                            <img src="img/apple.jpg" alt="">
+                        </div>
+                        <div class="specialties-item">
+                            <h1>인삼</h1>
+                            <p>
+                                소백산록의 유기물이 풍부한 토양에서<br>
+                                생산되는 풍기인삼은 타지방 어느 곳 인삼보다<br>
+                                내용조직이 충실하고 인삼향이 강하며<br>
+                                유효사포닌함량이 매우 높다.<br>
+                                소백산 풍기인삼은 약탕기에 끓여<br>
+                                재탕, 삼탕을 하여도 물렁하게 풀어지지 않는다.<br>
+                                육질이 탄탄하여 중량이 무겁고 약효도 뛰어나다.
+                            </p>
+                            <img src="img/insam.jpg" alt="">
+                        </div>
+                        <div class="specialties-item">
+                            <h1>인견</h1>
+                            <p>
+                                인견이란 인조견이라고도 불려지며,<br>
+                                사람이 만든 명주실로 짠 비단,<br>
+                                또는 인조견사라 하여 천연 섬유소로<br>
+                                명주실 비슷하게 인공적으로 만든실이라<br>
+                                하기도 합니다.
+                                간혹 대구,부산에서도 만들어지는데,<br>
+                                질적으로 풍기에서 만들어진 인견옷이<br>
+                                가장 유명하고, 잘만듭니다.
+                            </p>
+                            <img src="img/ingyeon.jpg" alt="">
+                        </div>
+                        <div class="specialties-item">
+                            <h1>포도</h1>
+                            <p>
+                                일교차가 큰 고산지대라 당도가 높은<br>
+                                단산포도와 영주사과가 생산된다. <br>
+                                포도축제와 함께 포도따기, 사과따기체험 등<br>
+                                 다양한 이벤트도 많다.
+                            </p>
+                            <img src="img/grape.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- 제작과정 -->
             <div class="row-col how-to-make">
@@ -313,6 +374,7 @@
                 <li><a href="https://www.nadrifood.co.kr/store/">Naduri Food</a></li>
                 <li><a href="https://alvarotrigo.com/blog/css-text-animations/">alvarotrigo</a></li>
                 <li><a href="https://swiperjs.com/get-started">swiperjs</a></li>
+                <li><a href="https://www.pexels.com/ko-kr/">Pexels</a></li>
             </div>
         </div>
     </div>
@@ -337,8 +399,11 @@
         function doScroll_naduri(){
             window.scrollTo({top:5500,behavior:"smooth"})
         }
-        function doScroll_howtomake(){
+        function doScroll_specialties(){
             window.scrollTo({top:6700,behavior:"smooth"})
+        }
+        function doScroll_howtomake(){
+            window.scrollTo({top:7900,behavior:"smooth"})
         }
         function doScroll_contect(){
             window.scrollTo({top:10000,behavior:"smooth"})

@@ -2,7 +2,8 @@
     --color-pink : #E4A9A8;
     --color-yellow : #DBAD4A;
     --color-blue : #ACCFCB;
-}
+    --color-darkblue : #3D8DAE;
+}   
 *{
     margin: 0;
     padding: 0;
@@ -41,7 +42,11 @@
 .nav{
     width: 100px;
     height: 80vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+        #E4A9A860, 
+        #DBAD4A60, 
+        #ACCFCB60
+        );
     position: fixed;
     right: 2%;
     top: 10%;
@@ -60,6 +65,7 @@
     /* font-family: 'Nanum Pen Script', cursive; */
     font-size: 40px;
     letter-spacing: 5px;
+    text-shadow:1px 1px 1px #000;
 }
 .nav ul{
     list-style: none;
@@ -75,6 +81,7 @@
     /* font-family: 'Nanum Pen Script', cursive; */
     font-size: 15px;
     font-weight: 900;
+    text-shadow:1px 1px 1px #000;
     letter-spacing: 2px;
     margin-bottom: 70px;
     margin-left: 5px;
@@ -360,6 +367,7 @@
     margin: 10px;
     font-size: 100px;
     font-weight: 700;
+    text-shadow:3px 3px 3px #000;
     font-family: 'Shadows Into Light', cursive;
     /* font-family: 'Ubuntu', sans-serif; */
     /* font-family: 'League Gothic', sans-serif; */
@@ -388,6 +396,7 @@
       filter: blur(0);
       color: #fff;
       text-shadow: none;
+      text-shadow:3px 3px 3px #000;
     }
 }
 .header p{
@@ -637,6 +646,7 @@
     margin: 100px;
     font-family: 'Jeju Hallasan', cursive;
     font-size: 100px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
 }
 .rep-downbutton{
     position: absolute;
@@ -1094,6 +1104,87 @@
     font-family: 'Nanum Pen Script', cursive;
     letter-spacing: 5px;
 }
+/* specialties */
+.specialties{
+    width: 90%;
+    height: 100vh;
+    margin: 200px auto;
+}
+.specialties-title{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    justify-content: space-between;
+}
+.specialties-title h1{
+    font-family: 'Jeju Hallasan', cursive;
+    font-size: 100px;
+}
+.specialties-title p{
+    font-size: 40px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+.specialties-section{
+    width: 80%;
+    height: 60%;
+    margin: 30px auto;
+    border: 8px double black;
+    position: relative;
+}
+.specialties-item{
+    width: 100%;
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    color: white;
+    border: 5px solid white;
+}
+.specialties-item:hover{
+    flex-grow: 2.5;
+    transition: 1s;
+}
+.specialties-item h1{
+    text-align: center;
+    margin: 10%;
+    font-family: 'Jeju Hallasan', cursive;
+}
+.specialties-item p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    line-height: 35px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px;
+}
+.specialties-item:hover p{
+    display: block;
+}
+.specialties-item:hover img{
+    opacity: 0.2;
+    height: 65%;
+}
+.specialties-item img{
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    bottom: 10%;
+    left: 5%;
+    border-radius: 20px;
+}
+.specialties-item:nth-child(1){
+    background-color: var(--color-blue);
+}
+.specialties-item:nth-child(2){
+    background-color: var(--color-pink);
+}
+.specialties-item:nth-child(3){
+    background-color: var(--color-yellow);
+}
+.specialties-item:nth-child(4){
+    background-color: var(--color-darkblue);
+}
+
 /* how to make */
 .how-to-make{
     width: 100%;
@@ -1205,6 +1296,8 @@
     background-color: var(--color-blue);
     justify-content: space-around;
     padding: 20px;
+    margin-top: 300px;
+    border-top: 1px solid black;
 }
 .contect{
     width: 20%;
