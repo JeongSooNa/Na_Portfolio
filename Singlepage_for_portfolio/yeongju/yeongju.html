@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What represent Yeong-Ju</title>
     <link rel="stylesheet" href="yeongju.css">
+    <link rel="favicon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
     <style>
         @import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
         @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Righteous&display=swap');
@@ -16,11 +23,22 @@
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
     </style>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div class="container">
+        <!-- scroll gauge -->
+        <div class="scroll-gauge">  
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div> 
+        </div>
+        <!-- 날으는 새 -->
         <div class="bird-animation">
             <div class="bird-container bird-container--one">
                 <div class="bird bird--one"></div>
@@ -35,17 +53,19 @@
                 <div class="bird bird--four"></div>
             </div>
         </div>
+        <!-- 사이드바 -->
         <div class="row-col nav">
             <h1>nav</h1>
             <ul>
-                <li onclick="doScroll_main()">Header</li>
+                <li onclick="doScroll_main()">Main</li>
                 <li onclick="doScroll_intro()">Intro</li>
                 <li onclick="doScroll_represent()">Represent</li>
-                <li>How to Make</li>
+                <li onclick="doScroll_howtomake()">How to Make</li>
                 <li onclick="doScroll_contect()">References<br>&<br>Contect</li>
             </ul>
         </div>
-        <div class="header">
+        <!-- 헤더 (맨 위) -->
+        <div id="main" class="header">
             <div class="cssload-circle"></div>
             <h1>
                 <span style="--i:1">Y</span>
@@ -57,20 +77,25 @@
                 <span style="--i:6">J</span>
                 <span style="--i:7">U</span>
             </h1>
-            <p class="cssload-loader">:  Product by Jeongsoo<br>Na</p>
+            <!-- <p class="cssload-loader">:  Product by Jeongsoo<br>Na</p> -->
+            <p>Product by Jeongsoo<br>Na</p>
         </div>
         <div class="main">
+            <!-- 인트로 -->
             <div class="row-col intro">
                 <div class="intro-top">
                     <h1>Intro</h1>
                     <p>
                         Let me introduce my hometown Yeong Ju<br>
-                        Where : Yeongju Gyeongsangbuk-do Korea<br>
-                        [소개]<br>
-                        옛 선조들이 학문을 닦고 자연을 벗삼아 지키던<br>
-                        태백산맥 소백산자락에 자리잡아 물길은 낙동강으로 이어지는
-                        아름다운 선비의 고장
+                        Where : Yeongju Gyeongsangbuk-do Korea
                     </p>
+                    <p>[ 소개 ]<br></p>
+                    <p>
+                        옛 선조들이 학문을 닦고 자연을 벗삼아 지키던<br>
+                        태백산맥 소백산자락에 자리잡아 물길은 낙동강으로 이어지는<br>
+                    </p>
+                    <p>아름다운 선비의 고장<br><br></p>
+                    <p>▼ move cursor in image</p>
                 </div>
                 <div class="intro-bottom" data-tilt>
                     <img class="img1" src="img/song.png" alt="">
@@ -78,6 +103,7 @@
                 </div>
             </div>
             <div class="represent">
+                <!-- 대표 시작 -->
                 <div class="represent-start">
                     <h1>Represent</h1>
                     <h2>영주의 맛과 멋을 찾아서</h2>
@@ -86,13 +112,14 @@
                         <img src="./img/—Pngtree—arrow directional vector_5956632.png" alt="">
                     </div>
                 </div>
+                <!-- 부석사 -->
                 <div class="row buseoksa">
                     <div class="row-col buseoksa-post">
                         <h1>부석사</h1>
                         <p>
                             대한민국 7대 사찰 중 하나<br>
                             승려를 사랑한 여인이 용이 되어<br>
-                            스님과 절을 지켰다는 이야기를 갖고있다.
+                            스님과 절을 지켰다는 이야기를 갖고있다.<br><br>
                         </p>
                         <h1>무량수전</h1>
                         <p>
@@ -105,17 +132,19 @@
                     <div class="row-col buseoksa-view">
                         <img src="./img/muryangsujeon.jpeg" alt="">
                         <p>
-                            부석사에서 바라본 소백산(小白山)<br>
-                            경상도를 소백산맥의 남쪽에 있다하여 영남(嶺南)이라 한다.<br>
+                            부석사에서 바라본 소백산<br>
+                            경상도를 소백산맥의 남쪽에 있다하여 영남이라 한다.<br>
                             여우가 산다하니 찾아보자.
                         </p>
+                        <div class="fox"><img src="img/fox.png" alt=""></div>
                     </div>
                     <div class="row-col buseoksa-downbutton" onclick="doScroll_museom()">
                         <h4>Click Down</h4>
                         <img src="./img/—Pngtree—arrow directional vector_5956632.png" alt="">
                     </div>
                 </div>
-                <div class="row-col museom">
+                <!-- 무섬마을 -->
+                <div id="museom" class="row-col museom">
                     <div class="row-col museom-title">
                         <h1>영주 무섬마을</h1>
                         <p>영주 무섬마을은 조선시대 중기인 17세기 중반에 자리를 잡은 유서 깊은 전통마을이다.</p>
@@ -123,7 +152,9 @@
                     <div class="museom-post">
                         <div class="museom-post-card">
                             <p>
-                                무섬마을은 물 위에 떠 있는 섬을 뜻하는 수도리(水島里)의 우리말 이름으로 삼면이 내성천과 접해있는 전형적인 물도리 마을로 마을 앞을 돌아나가는 내성천은 맑고 잔잔하며 산과 물이 태극 모양으로 서로 안고 휘감아 돌아 산수의 경치가 절경을 이룬다.
+                                무섬마을은 물 위에 떠 있는 섬을 뜻하는 수도리의 우리말 이름으로 
+                                삼면이 내성천과 접해있는 전형적인 물도리 마을로 마을 앞을 돌아나가는 내성천은 
+                                맑고 잔잔하며 산과 물이 태극 모양으로 서로 안고 휘감아 돌아 산수의 경치가 절경을 이룬다.
                             </p>
                         </div>
                         <div class="museom-post-card">
@@ -175,11 +206,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row-col museom-downbutton" onclick="doScroll_museom()">
+                    <div class="row-col museom-downbutton" onclick="doScroll_naduri()">
                         <h4>Click Down</h4>
                         <img src="./img/—Pngtree—arrow directional vector_5956632.png" alt="">
                     </div>
                 </div>
+                <!-- 나드리 분식 -->
                 <div class="row naduri">
                     <div class="row-col naduri-intro">
                         <h1>나드리 분식</h1>
@@ -200,7 +232,14 @@
                             <img src="./img/naduri_ceo.jpeg" alt="">
                         </div>
                         <div class="naduri-section-card">
-                            
+                            <p> 어린 시절 학교를 다니며 쫄면을 즐겨 먹었던 분들께서 명절이 되면<br>
+                                영주에 오셔서 나드리 쫄면을 먹기 위해 찾아주십니다.<br>
+                                찾아주시는 분이 많아져서 나드리는 북새통이 되고 밖으로<br>
+                                긴 줄이 늘어섭니다.<br>
+                                누구나 어릴 때 먹었던 음식에 대한 향수를 가지고 계시듯<br>
+                                나드리 쫄면도 그렇게 된 것 같아서 기분이 좋습니다.<br>
+                                나드리 쫄면은 경북 영주, 그 시절 그모습 그대로 자리 잡고 있습니다.
+                            </p>
                         </div>
                         <div class="naduri-section-card">
                             <img src="./img/nadri_logo.png" alt="">
@@ -209,9 +248,41 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="how-to-make">
-                <!-- 제작과정 -->
+            <!-- 제작과정 -->
+            <div class="row-col how-to-make">
+                <div class="how-to-make-title-container">
+                    <h2 class="how-to-make-title">
+                        <span class="title-word title-word-1">How</span>
+                        <span class="title-word title-word-2">to</span>
+                        <span class="title-word title-word-3">Make</span>
+                    </h2>
+                    <p>
+                        Production Time<br>
+                        <span>2022.03 ~</span><br>
+                        Use<br>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Javascript</span>
+                        <span>Vanilla-JS</span>
+                        <span>VScode</span>
+                        <span>Google Font</span>
+                        <span>GitHub</span>
+                    </p>
+                </div>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide"><img src="img/slide2.PNG" alt=""></div>
+                      <div class="swiper-slide"><img src="img/slide1.PNG" alt=""></div>
+                      <div class="swiper-slide"><img src="img/slide3.PNG" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
             </div>
         </div>
         <div class="row footer">
@@ -228,12 +299,20 @@
             <div class="row-col information">
                 <h1>Name : <span>Jeongsoo Na</span></h1>
                 <h1>Tel : <span>010 6672 3171</span></h1>
+                <h1>Kakao : <span>najs2188</span></h1>
                 <h1>E-mail : <span>skwjdtn3171@naver.com</span></h1>
+                <div class="information-qr">
+                    <h5>kakao ID</h5>
+                    <img src="img/kakaoqr.png" alt="">
+                </div>
             </div>
             <div class="references">
                 <h1>References</h1>
                 <li><a href="https://codepen.io/matchboxhero/pen/RLebOY">codepen.io</a></li>
                 <li><a href="https://micku7zu.github.io/vanilla-tilt.js/">Vanilla-tilt.js</a></li>
+                <li><a href="https://www.nadrifood.co.kr/store/">Naduri Food</a></li>
+                <li><a href="https://alvarotrigo.com/blog/css-text-animations/">alvarotrigo</a></li>
+                <li><a href="https://swiperjs.com/get-started">swiperjs</a></li>
             </div>
         </div>
     </div>
@@ -244,21 +323,63 @@
             window.scrollTo({top:0,behavior:"smooth"})
         }
         function doScroll_intro(){
-            window.scrollTo({top:1150,behavior:"smooth"})
+            window.scrollTo({top:1130,behavior:"smooth"})
         }
         function doScroll_represent(){
-            window.scrollTo({top:2300,behavior:"smooth"})
+            window.scrollTo({top:2200,behavior:"smooth"})
         }
         function doScroll_buseoksa(){
-            window.scrollTo({top:3500,behavior:"smooth"})
+            window.scrollTo({top:3250,behavior:"smooth"})
         }
         function doScroll_museom(){
-            window.scrollTo({top:4650,behavior:"smooth"})
+            window.scrollTo({top:4350,behavior:"smooth"})
+        }
+        function doScroll_naduri(){
+            window.scrollTo({top:5500,behavior:"smooth"})
+        }
+        function doScroll_howtomake(){
+            window.scrollTo({top:6700,behavior:"smooth"})
         }
         function doScroll_contect(){
             window.scrollTo({top:10000,behavior:"smooth"})
         }
     </script>
     <script src="vanilla-tilt.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            autoplay : {
+                delay : 3000,
+            },
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 </body>
 </html>
