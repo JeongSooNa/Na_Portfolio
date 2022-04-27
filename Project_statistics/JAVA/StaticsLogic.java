@@ -34,8 +34,8 @@ public class StaticsLogic {
 	// 중위수
 	public double cen(double array[]) {
 		Arrays.sort(array);
-		if(array.length%2==0) return array[array.length/2];
-		else return (array[array.length/2]+array[(array.length/2)+1])/2;
+		if(array.length%2 != 0) return array[array.length/2];
+		else return (array[array.length/2]+array[(array.length/2)-1])/2;
 	}
 	// 표준편차
 	public double std(double array[]) {
@@ -61,7 +61,7 @@ public class StaticsLogic {
 	}
 	// 1사분위수
 	public double q1(double array[]) {
-		
+		int len = array.length;
 		return 0;
 	}
 	// 3사분위수
