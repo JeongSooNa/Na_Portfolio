@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class StaticsLogic {
+public class StaticsSummaryLogic {
 	// 최솟값
 	public float min(List<Float> array) {
 		float min = array.get(0);
@@ -22,6 +22,14 @@ public class StaticsLogic {
 		}
 		return max;
 	}
+	// 범위
+	public float range(List<Float> array) {
+		return max(array)-min(array);
+	}
+	// 갯수
+	public int count(List<Float> array) {
+		return array.size();
+	}
 	// 합
 	public float sum(List<Float> array) {
 		float sum = 0;
@@ -35,7 +43,7 @@ public class StaticsLogic {
 		return sum/array.size();
 	}
 	// 중위수
-	public float cen(List<Float> array) {
+	public float med(List<Float> array) {
 		Collections.sort(array);
 		int len = array.size();
 		if(len%2==0) return (array.get(len/2)+array.get((len/2)-1))/2;
@@ -68,9 +76,9 @@ public class StaticsLogic {
 		Collections.sort(array);
 		int len = array.size();
 		if(len%4 == 1) return array.get((len-1)/2/2);
-		if(len%4 == 2) return ((float)(array.get((len-2)/2/2)*0.25)+(float)(array.get(((len-2)/2/2)+1)*0.75))/2;
+		if(len%4 == 2) return (float)(array.get((len-2)/2/2)*0.25)+(float)(array.get(((len-2)/2/2)+1)*0.75);
 		if(len%4 == 3) return (array.get((len-3)/2/2)+array.get(((len-3)/2/2)+1))/2;
-		if(len%4 == 0) return ((float)(array.get((len)/2/2)*0.75)+(float)(array.get(((len)/2/2)-1)*0.25))/2;
+		if(len%4 == 0) return (float)(array.get((len)/2/2)*0.75)+(float)(array.get(((len)/2/2)-1)*0.25);
 		return 0;
 	}
 	// 3사분위수
@@ -78,34 +86,33 @@ public class StaticsLogic {
 		Collections.sort(array);
 		int len = array.size();
 		if(len%4 == 1) return array.get(3*(len/4));
-		if(len%4 == 2) return ((float)(array.get(3*(len/4))*0.75)+(float)(array.get((3*(len/4))+1)*0.25))/2;
+		if(len%4 == 2) return (float)(array.get(3*(len/4))*0.75)+(float)(array.get((3*(len/4))+1)*0.25);
 		if(len%4 == 3) return (array.get(((len/4)*3)+1)+array.get(((len/4)*3)+2))/2;
-		if(len%4 == 0) return ((float)(array.get(3*(len/4))*0.75)+(float)(array.get((3*(len/4))-1)*0.25))/2;
+		if(len%4 == 0) return (float)(array.get(3*(len/4))*0.75)+(float)(array.get((3*(len/4))-1)*0.25);
 		return 0;
 	}
 	// 사분위수 범위
 	public float iqr(List<Float> list) {
 		return q3(list)-q1(list);
 	}
-	// 이상치 추출
+	// 이상치 추출 (Error)
 	public List<Float> outlier(List<Float> list) {
 		List<Float> outlier = new ArrayList<Float>();
-		for(Float i : list) {
+		for(float i : list) {
 			if(i > (q3(list)+(iqr(list)*3)) || i < (q1(list)-(iqr(list)*3))) {
 				outlier.add(i);
 			};
 		}
 		return outlier;
 	}
-	// 이상치를 제외한 List 추출
+	// 이상치를 제외한 List 추출  (Error)
 	public List<Float> removeOutlier(List<Float> list){
-		List<Float> outlierIndex = new ArrayList<Float>();
-		for(int i=0;i<list.size();i++) {
-			if(i > (q3(list)+(iqr(list)*3)) || i < (q1(list)-(iqr(list)*3))) {
-				outlierIndex.add(i);
-			};
+		for(float i : outlier(list)) {
+			for(int j=0;j<list.size();j++) {
+				if(list.get(j) == i) list.remove(j);
+			}
 		}
-		return null;
+		return list;
 	}
 	// List가 주어지고, 유의확률이 주어질 때 검정 결과(Boolean)
 	// List가 주어지고, 유의확률이 주어질 때 참이 될 수 있는 표본 수
