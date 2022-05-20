@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(210deg, skyblue, blue)
+}
+/* backgroud-img 넣고 투명화 */
+/* css, js로 bubble 구현 및 link 연결 */
