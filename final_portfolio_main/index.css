@@ -2,11 +2,125 @@
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    transition: 0.5s;
 }
-.container{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(210deg, skyblue, blue)
-}
-/* backgroud-img 넣고 투명화 */
 /* css, js로 bubble 구현 및 link 연결 */
+/* backgroud-img 넣고 투명화 */
+
+.row{
+    display: flex;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* container */
+.container{
+    /* background: linear-gradient(210deg, skyblue, blue) */
+    background-color: black;
+    position: relative;
+}
+.container img{
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 40%;
+    left: 40%;
+    cursor: pointer;
+}
+.container img:hover{
+    transform: scale(10);
+    transition: 30s;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: 10vh;
+    border-bottom: 1px solid white;
+}
+.header h1{
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-family: 'Caveat', cursive;
+}
+
+/* main */
+.main{    
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.main a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+}
+.main > *:hover{
+    transform: scale(2);
+}
+.githubWrapper{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.blogWrapper{
+    position: absolute;
+    top: 85%;
+    left: 90%;
+}
+.portfolioWrapper{
+    position: absolute;
+    top: 77%;
+    left: 62%;
+}
+.instagramWrapper{
+    position: absolute;
+    top: 15%;
+    left: 80%;
+}
+.kakaotalkWrapper{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+.projectsWrapper{
+    position: absolute;
+    top: 30%;
+    left: 28%;
+}
+.footer{
+    width: 100%;
+    height: 10vh;
+    border-top: 1px solid white;
+    justify-content: space-around;
+}
+
+.contectWrapper{
+    width: 50%;
+    color: white;
+}
+.contectWrapper-title{
+    text-align: center;
+}
+.techStack{
+    width: 50%;
+    color: white;
+}
+.techStack-title{
+    text-align: center;
+}
+.techStack-list{
+    justify-content: space-around;
+}
+.techStack-list-1 ul{
+    list-style: none;
+}
+.techStack-list-2 ul{
+    list-style: none;
+}
