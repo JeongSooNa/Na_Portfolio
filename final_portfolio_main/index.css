@@ -46,7 +46,8 @@
     text-align: center;
     color: white;
     font-size: 60px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 20px;
 }
 
 /* main */
@@ -59,10 +60,11 @@
     color: white;
     font-size: 25px;
     text-decoration: none;
-    font-family: 'Caveat', cursive;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
 }
 .main > *:hover{
-    transform: scale(2);
+    transform: scale(1.5);
 }
 .githubWrapper{
     position: absolute;
@@ -99,6 +101,8 @@
     height: 10vh;
     border-top: 1px solid white;
     justify-content: space-around;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
 }
 
 .contectWrapper{
@@ -122,5 +126,8 @@
     list-style: none;
 }
 .techStack-list-2 ul{
+    list-style: none;
+}
+.techStack-list-3 ul{
     list-style: none;
 }
