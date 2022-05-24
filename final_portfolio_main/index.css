@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     transition: 0.5s;
 }
 /* css, js로 bubble 구현 및 link 연결 */
@@ -22,18 +22,19 @@
     background-color: black;
     position: relative;
 }
-.container img{
+#moon{
     z-index: 1;
     position: absolute;
-    width: 300px;
-    height: 300px;
+    opacity: 0.5;
+    width: 250px;
+    height: 250px;
     top: 40%;
     left: 40%;
     cursor: pointer;
 }
 .container img:hover{
-    transform: scale(10);
-    transition: 30s;
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 /* header */
@@ -66,30 +67,34 @@
 .main > *:hover{
     transform: scale(1.5);
 }
+.main img{
+    width: 30px;
+    height: 30px;
+}
 .githubWrapper{
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 6%;
 }
 .blogWrapper{
     position: absolute;
     top: 85%;
-    left: 90%;
+    left: 75%;
 }
 .portfolioWrapper{
     position: absolute;
     top: 77%;
-    left: 62%;
+    left: 48%;
 }
 .instagramWrapper{
     position: absolute;
     top: 15%;
-    left: 80%;
+    left: 65%;
 }
 .kakaotalkWrapper{
     position: absolute;
     top: 80%;
-    left: 10%;
+    left: 3%;
 }
 .projectsWrapper{
     position: absolute;
