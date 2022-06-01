@@ -36,6 +36,16 @@
     transform: scale(1.1);
     transition: 1s;
 }
+.borderText{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    position: absolute;
+    z-index: 2;
+    top: 55%;
+    left: 35%;
+    display: block;
+}
 
 /* header */
 .header{
@@ -66,6 +76,7 @@
 }
 .main > *:hover{
     transform: scale(1.5);
+    display: block;
 }
 .main img{
     width: 30px;
