@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaeJeon Bus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+></script>
+<script>
+    // 항목명(영문)	   항목명(국문)
+    // headerCd	    결과코드
+    // headerMsg	결과메세지
+    // msgBody	    결과리스트
+    // currentPage	요청된 페이지
+    // itemCnt	    결과값 총 수
+    // itemPageCnt	결과 페이지 수
+	// ARR_TIME	    이벤트발생시각
+	// BUS_NODE_ID	정류소ID(7자리)
+	// BUS_STOP_ID	정류소ID(5자리)
+	// DIR	        방향성
+	// EVT_CD	    이벤트 유형
+	// GPS_LATI	    차량 위도 좌표
+	// GPS_LONG	    차량 경도 좌표
+	// ROUTE_CD	    버스노선 일련번호(8자리)
+	// STRE_DT	    저장일자
+	// TOTAL_DIST	기점으로부터 누적 운행거리
+	// ud_type	    상행/하행 정보
+
+    $.ajax({
+        url : "http://openapitraffic.daejeon.go.kr/api/rest/busposinfo/getBusPosByRtid?busRouteId=30300001&serviceKey=MBtoNC7p5odX2BLl1DHTdu9CKQLCs4sJfAJ0B7ikIRRQ6oZ4Y%2BWbovaUFzEGZL5lkbXYMT3W8dYaveBu4wi0Iw%3D%3D",
+        type : 'GET',
+        dataType : 'json', 
+        success : function(response){
+            console.log(response)    
+        }
+    })
+</script>
+</html>
