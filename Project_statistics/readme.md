@@ -49,3 +49,5 @@
 - Z : 신뢰수준(%) (1.65, 1.96, 2.58)
 - n : 샘플 사이즈
 
+### 참고사이트
+https://ko.surveymonkey.com/mp/sample-size-calculator/
