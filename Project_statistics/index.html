@@ -15,8 +15,11 @@
         <div class="row main">
             <input type="text" id="n" placeholder="모집단을 입력하시오.">
             <input type="text" id="z" placeholder="신뢰구간을 입력하시오.">
-            <input type="text" id="p" placeholder="유의확률을 입력하시오.">
+            <input type="text" id="e" placeholder="유의확률을 입력하시오.">
             <button type="button" onclick="calculatorSampleSize()">결과값 확인</button>
+        </div>
+        <div class="result">
+            <input id="result" type="text" value="0" />
         </div>
         <div class="footer"></div>
     </div>
@@ -34,8 +37,8 @@
     function calculatorSampleSize(){
         var n = document.getElementById("n").value;
         var z = document.getElementById("z").value;
-        var p = document.getElementById("p").value;
-        var e2 = (1.96*1.96)*((p*(1-p))/n);
+        var e = document.getElementById("e").value;
+        var p = 0.5;
         if(n==''){
             alert("모집단 수를 입력하시오.");
             document.getElementById("n").focus();
@@ -51,9 +54,22 @@
             document.getElementById("p").focus();
             return false;
         }
-        var sampleSize = 0.0;
-        sampleSize = (((z*z)*p*(1-p))/e2)/(1+(((z*z)*p*(1-p))/(e2*n)));
-        console.log(sampleSize)
+        console.log(n+"/"+z+"/"+e+"/"+p)
+        var sampleSizeH = 0;
+        sampleSizeH = z*z*p*(1-p)
+        sampleSizeH = sampleSizeH/e
+        sampleSizeH = sampleSizeH/e
+        console.log(sampleSizeH)
+        var sampleSizeL = 0;
+        sampleSizeL = z*z*p*(1-p)
+        sampleSizeL = sampleSizeL/e
+        sampleSizeL = sampleSizeL/e
+        sampleSizeL = sampleSizeL/n
+        sampleSizeL = sampleSizeL+1
+        var sampleSize = sampleSizeH / sampleSizeL;
+        // ((z*z*p*(1-p))/e*e) / (1+((z*z*p*(1-p))/(e*e*n)));
+        // Issue : javascript에서는 왜 연산에서 오류가 나는지 찾을 것!
+        document.getElementById("result").value = sampleSize;
     }
 
 </script>
