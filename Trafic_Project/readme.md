@@ -11,7 +11,8 @@
 8. 음주정도별
 
 ### 분석 방법
-1. 그래프(Histogram, Plot, Pie Chart)
+1. 그래프(Histogram, Plot, Pie Chart, Radar Chart, Polar Area)
+    그래프 그려주는 사이트 참조
 2. 지도(시도별 자료를 지도에 표기)
 3. 카드섹션, 팝업 등을 활용한 데이터 표시
 3. 결론도출 
