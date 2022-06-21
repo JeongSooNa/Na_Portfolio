@@ -39,20 +39,36 @@
     // Histogram D3.JS 구현
     //data
     // 다음과 같은 배열을 ajax를 통해 불러오기.
-    var data1 = [5,10,15,20,25,30,35,40,45,50];
+    var data = [5,10,15,20,25,30,35,40,45,50];
     // SVG tag를 선택
-    var svg1 = d3.select('#histogram');
-    data1.forEach((d,i) => {
+    var svg = d3.select('svg');
+    data.forEach((d,i) => {
         // rect : 막대 하나하나
-        svg1.append('rect')
-        .attr('height',d)
-        .attr('width',20)
+        svg.append('rect')
+        .attr('height',data[i])
+        .attr('width',40)
         .attr('x',50*i)
-        .attr('y',400-d)
+        .attr('y',100-data[i])
     })
 
     // Plot
     var svg2 = d3.select('#plot');
 
+
+    // histogram function
+    var d = [
+        {region : "서울", accidents : 200, death : 13},
+        {region : "인천", accidents : 70, death : 2},
+        {region : "대전", accidents : 60, death : 3},
+        {region : "광주", accidents : 80, death : 5},
+        {region : "대구", accidents : 120, death : 10},
+        {region : "부산", accidents : 150, death : 10},
+        {region : "울산", accidents : 40, death : 8},
+    ]
+    function HistogramF(d,{
+        
+    })
+
 </script>
 </html>
+
