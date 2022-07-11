@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects 학원 게시판사이트</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="shortcut icon" href="../images/logo.ico" />
+        <style type="text/css">
+            .img-container {
+                max-width: 600px;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <a href="../index.html">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </a>
+            <ul id="navigation">
+                <li><a href="../index.html">HOME</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <br />
+            <div class="img-container">
+                <img src="../images/SMARTFACTORY/smart-factory-main.PNG"/>
+            </div>
+            <h3>학원 게시판사이트</h3>
+            <p>
+                수업시간에 진행했던 CRUD를 기초로 간단한 학원 게시판을 개발했습니다.
+                <br />
+                개발기간은 2022년 6월 2주정도 소요되었고, 처음으로 클라우드(AWS)에 배포까지 해보았습니다.
+                <br />
+                <br />
+                RestController와 Controller를 따로 구현하여 백엔드와 프론트가 통신하는 그림을 공부하게 되었고, 
+                AJAX를 이용해 비동기처리를 하는 방식을 알게 되었습니다.
+                <br />
+                <br />
+                MVC 패턴을 베이스로 Controller, Service, Mapper에서 MyBatis를 사용하여 SQL로 이어지는 구조를 공부하는데
+                중점을 두어 개발하였고, Update, Delete, Insert는 VO객체로 Mapping하고, Select는 HashMap을 Mapping하는 규칙도
+                정해보았습니다.
+                WAR와 JAR의 차이점을 알고, AWS EC2에 WAR파일을 최종 배포(deploy)해보았습니다.
+                <br />
+                해당 게시판은 <a href="">Board</a> 에서 확인이 가능합니다.
+                <br />
+                아이디는 -- 비밀번호는 -- 입니다.
+                <br />
+                해당 게시판 소스는 <a href="">GitHub</a>에서 확인하실 수 있습니다.
+                <br />
+                <br />
+                Service에서의 로직구현이나 ---아쉬운점
+            </p>
+
+            <h5>Technologies:</h5>
+            <ul>
+                <li>- HTML5 & CSS3</li>
+                <li>- JavaScript</li>
+                <li>- JQuery</li>
+                <li>- AJAX</li>
+                <li>- JAVA (12.0.2v)</li>
+                <li>- Git</li>
+                <li>- Restful API</li>
+                <li>- Spring Boot (2.67)</li>
+                <li>- KAKAO Maps API</li>
+                <li>- Spring Security</li>
+                <li>- Spring poi</li>
+                <li>- MySQL</li>
+                <li>- MyBatis</li>
+                <li>- Gradle</li>
+                <li>- JSP & JSTL</li>
+                <li>- Eclipse</li>
+                <li>- VSCode</li>
+                <li>- AWS EC2 (CentOS)</li>
+                <li>- AWS RDS (MySQL)</li>
+            </ul>
+            <!-- 서브 사진 -->
+            <h5>Table 구조</h5>
+            <div class="img-container">
+                <img src="../images/Board/board-table.JPG" style="width: 350px; height: 350px; border: 1px solid black;"/>
+            </div>
+            <h5>Table 구조</h5>
+            <div class="img-container">
+                <img src="../images/Board/board-table.JPG" style="width: 350px; height: 350px; border: 1px solid black;"/>
+            </div>
+            <h5>Board</h5>
+            <div class="img-container">
+                <img src="../images/Board/board-table.JPG" style="width: 350px; height: 350px; border: 1px solid black;"/>
+            </div>
+            <h5>Board Logs</h5>
+            <div class="img-container">
+                <img src="../images/Board/board-table.JPG" style="width: 350px; height: 350px; border: 1px solid black;"/>
+            </div>
+            <h5>Login</h5>
+            <div class="img-container">
+                <img src="../images/Board/board-table.JPG" style="width: 350px; height: 350px; border: 1px solid black;"/>
+            </div>
+            <h5>Sign-up</h5>
+            <div class="img-container">
+                <img src="../images/Board/board-table.JPG" style="width: 350px; height: 350px; border: 1px solid black;"/>
+            </div>
+        </div>
+    </body>
+</html>
