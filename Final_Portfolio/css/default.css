@@ -427,3 +427,6 @@ h6 {
     border: 1px solid black;
     border-radius: 20px;
 }
+.img-container img{
+    width: 150%;
+}
